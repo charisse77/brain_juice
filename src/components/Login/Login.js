@@ -3,14 +3,34 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 function Login() {
+
 function handleSubmit(e){
   e.preventDefault();
-  var x = document.getElementById("form");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
+  var loginForm = document.getElementById("form");
+  var addNewBtn = document.getElementById("addNew")
+  var projectCard = document.getElementById("projectCard");
+
+  if(loginForm.style.display === "none"){
+    console.log("block")
+  }else{
+    loginForm.style.display = "none";
+    addNewBtn.style.display = "block";
+    projectCard.style.display = "flex";
+    projectCard.classList.add("justify-content-center");
   }
+
+
+  // if (x.style.display === "none") {
+  //   x.style.display = "block";
+  // } else {
+  //   x.style.display = "none";
+  // }
+
+  // if (y.style.display === "none") {
+  //   y.style.display = "block";
+  // } else {
+  //   y.style.display = "none";
+  // }
 }
 
   return (
